@@ -70,3 +70,36 @@ data.myProfile.posts.forEach((post) => {
 
     postListHtml.innerHTML += `<div class="post"> ${postHtml} </div>`
 }) 
+
+const inputButton=document.querySelector(".send");
+
+    inputButton.addEventListener("click", function() {
+    let time = dayjs();
+    let dateTimeString = time.format('DD-MM-YYYY HH:mm:ss');
+
+    //prendo l'elemento html dell'input
+    const textInput = document.querySelector("textarea");
+
+    let newTextPost = textInput.value
+    
+    data.myProfile.posts.push({text:newTextPost, date:dateTimeString});
+    
+    textInput.value = '';
+
+    let nuovoPost = `
+    <div class="post-details"> 
+        <div class="user-pic">
+            <img src="${data.myProfile.details.pic}" alt="user pic">
+        </div>
+        <div class="details">
+            <div class="user-name">${data.myProfile.details.name} ${data.myProfile.details.surname}</div>
+            <div class="post-date">${dateTimeString}</div>
+        </div>
+    </div> 
+    <div class="post-text">
+        ${newTextPost}
+    </div>
+    ` 
+    postListHtml.innerHTML += `<div class="post"> ${nuovoPost} </div>`
+
+})

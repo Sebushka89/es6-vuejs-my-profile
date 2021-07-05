@@ -37,7 +37,7 @@ new Vue(
         methods:{
             addMessage: function(){
                 const time = dayjs();
-                const dateTimeString = time.format('DD/MM/YYYY HH:mm:ss');
+                const dateTimeString = time.format('DD-MM-YYYY HH:mm:ss');
 
                 let newPost = this.input;
                 this.myProfile.posts.push({
