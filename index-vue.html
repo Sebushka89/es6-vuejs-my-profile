@@ -38,7 +38,7 @@
                         <div class="user-name">{{myProfile.details.name}} {{myProfile.details.surname}}</div>
                         <div class="post-date">{{post.date}}</div>
                     </div>
-                    <i @click="deletePost" class="fas fa-times"></i>
+                    <i @click="deletePost(index)" class="fas fa-times"></i>
                 </div> 
                 <div class="post-text">
                     {{post.text}}
