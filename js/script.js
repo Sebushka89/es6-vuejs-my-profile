@@ -104,3 +104,10 @@ const inputButton=document.querySelector(".send");
     postListHtml.innerHTML += `<div class="post"> ${nuovoPost} </div>`
 
 })
+let deleteIcon = document.querySelectorAll('.fas');
+let thisPost = document.querySelectorAll('.post');
+deleteIcon.forEach((icon, index) => {
+    icon.addEventListener('click', () => {
+        thisPost[index].style.display = "none";
+    });
+});
