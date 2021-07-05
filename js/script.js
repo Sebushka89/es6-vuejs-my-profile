@@ -50,6 +50,7 @@ data.myProfile.posts.forEach((post) => {
             <div class="user-name">${data.myProfile.details.name} ${data.myProfile.details.surname}</div>
             <div class="post-date">${post.date}</div>
         </div>
+        <i class="fas fa-times"></i>
     </div> 
     <div class="post-text">
         ${post.text}
