@@ -47,8 +47,11 @@ new Vue(
                 this.input='';
                 setTimeout(() => {
                     document.querySelector('.post:last-child').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-                },);
-            }
-        },
+                },)
+            },
+            deletePost: function(index) {
+                this.myProfile.posts.splice(index, 1);
+            }   
+        }
     }
 );

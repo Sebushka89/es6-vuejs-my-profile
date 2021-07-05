@@ -72,6 +72,13 @@
     box-shadow: 0 0 3px #ccc;
     padding: 15px;
     margin-bottom: 15px;
+    position: relative;
+}
+
+i{
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
 
 .post-media img {
@@ -83,10 +90,20 @@
     align-items: center;
 }
 
-.post-details .user-pic img {
-    width: 60px;
-    height: 60px;
+.post-details .user-pic{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
     border-radius: 50%;
+    position: relative;
+}
+
+.post-details .user-pic img {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .post-details .details {
