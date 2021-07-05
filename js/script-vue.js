@@ -1,3 +1,5 @@
+//Con un click su “CREA” viene pushato un nuovo post nell’array posts, con il testo della textarea.
+//Sviluppare sia in vanilla/es6 che in VueJS
 Vue.config.devtools = true;
 
 new Vue(
@@ -28,7 +30,24 @@ new Vue(
                         mediaPath: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Supernerd_%283262512306%29.jpg/1024px-Supernerd_%283262512306%29.jpg',
                         date: '17-06-2021'
                     }
-                ]
+                ],
+            },
+            input: ''
+        },
+        methods:{
+            addMessage: function(){
+                const time = dayjs();
+                const dateTimeString = time.format('DD/MM/YYYY HH:mm:ss');
+
+                let newPost = this.input;
+                this.myProfile.posts.push({
+                    text: newPost,
+                    date: dateTimeString
+                });
+                this.input='';
+                setTimeout(() => {
+                    document.querySelector('.post:last-child').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+                },);
             }
         },
     }

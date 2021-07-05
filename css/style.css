@@ -49,7 +49,9 @@
     border: 1px #ccc solid;
     height: 40px;
     font-size: 18px;
-    padding: 5px;
+    padding: 5px 5px 5px 15px;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
 }
 
 .new-post .send {
@@ -58,8 +60,8 @@
     color: #fff;
     border: 0;
     font-weight: bold;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 
 }
 
@@ -69,6 +71,7 @@
     border-radius: 5px;
     box-shadow: 0 0 3px #ccc;
     padding: 15px;
+    margin-bottom: 15px;
 }
 
 .post-media img {
@@ -81,7 +84,8 @@
 }
 
 .post-details .user-pic img {
-    width: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
