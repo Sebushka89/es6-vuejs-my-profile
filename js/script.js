@@ -83,7 +83,10 @@ const inputButton=document.querySelector(".send");
 
     let newTextPost = textInput.value
     
-    data.myProfile.posts.push({text:newTextPost, date:dateTimeString});
+    data.myProfile.posts.push({
+        text:newTextPost,
+        date:dateTimeString
+    });
     
     textInput.value = '';
 
