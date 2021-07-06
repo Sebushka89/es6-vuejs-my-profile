@@ -96,6 +96,7 @@ const inputButton=document.querySelector(".send");
             <div class="user-name">${data.myProfile.details.name} ${data.myProfile.details.surname}</div>
             <div class="post-date">${dateTimeString}</div>
         </div>
+        <i class="fas fa-times"></i>
     </div> 
     <div class="post-text">
         ${newTextPost}
